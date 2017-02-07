@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A5EFBE3C1E4A70B600B16EDC /* FloatingLabelTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EFBE3A1E4A70B600B16EDC /* FloatingLabelTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5EFBE461E4A712500B16EDC /* FloatingLabelTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EFBE441E4A712500B16EDC /* FloatingLabelTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5EFBE4B1E4A716400B16EDC /* FloatingLabelAnimators.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EFBE481E4A716400B16EDC /* FloatingLabelAnimators.swift */; };
+		A5EFBE4C1E4A716400B16EDC /* FloatingLabelIconTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EFBE491E4A716400B16EDC /* FloatingLabelIconTextField.swift */; };
+		A5EFBE4D1E4A716400B16EDC /* FloatingLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EFBE4A1E4A716400B16EDC /* FloatingLabelTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A5EFBE371E4A70B600B16EDC /* FloatingLabelTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FloatingLabelTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5EFBE3A1E4A70B600B16EDC /* FloatingLabelTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FloatingLabelTextField.h; sourceTree = "<group>"; };
-		A5EFBE3B1E4A70B600B16EDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5EFBE441E4A712500B16EDC /* FloatingLabelTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloatingLabelTextField.h; sourceTree = "<group>"; };
+		A5EFBE451E4A712500B16EDC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5EFBE481E4A716400B16EDC /* FloatingLabelAnimators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingLabelAnimators.swift; sourceTree = "<group>"; };
+		A5EFBE491E4A716400B16EDC /* FloatingLabelIconTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingLabelIconTextField.swift; sourceTree = "<group>"; };
+		A5EFBE4A1E4A716400B16EDC /* FloatingLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingLabelTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,7 +36,7 @@
 		A5EFBE2D1E4A70B600B16EDC = {
 			isa = PBXGroup;
 			children = (
-				A5EFBE391E4A70B600B16EDC /* FloatingLabelTextField */,
+				A5EFBE431E4A712500B16EDC /* Source */,
 				A5EFBE381E4A70B600B16EDC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,13 +49,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A5EFBE391E4A70B600B16EDC /* FloatingLabelTextField */ = {
+		A5EFBE431E4A712500B16EDC /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				A5EFBE3A1E4A70B600B16EDC /* FloatingLabelTextField.h */,
-				A5EFBE3B1E4A70B600B16EDC /* Info.plist */,
+				A5EFBE481E4A716400B16EDC /* FloatingLabelAnimators.swift */,
+				A5EFBE491E4A716400B16EDC /* FloatingLabelIconTextField.swift */,
+				A5EFBE4A1E4A716400B16EDC /* FloatingLabelTextField.swift */,
+				A5EFBE441E4A712500B16EDC /* FloatingLabelTextField.h */,
+				A5EFBE451E4A712500B16EDC /* Info.plist */,
 			);
-			path = FloatingLabelTextField;
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,7 +68,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5EFBE3C1E4A70B600B16EDC /* FloatingLabelTextField.h in Headers */,
+				A5EFBE461E4A712500B16EDC /* FloatingLabelTextField.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +105,7 @@
 					A5EFBE361E4A70B600B16EDC = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = LAA5EN69T7;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -132,6 +142,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5EFBE4C1E4A716400B16EDC /* FloatingLabelIconTextField.swift in Sources */,
+				A5EFBE4D1E4A716400B16EDC /* FloatingLabelTextField.swift in Sources */,
+				A5EFBE4B1E4A716400B16EDC /* FloatingLabelAnimators.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,18 +253,20 @@
 		A5EFBE401E4A70B600B16EDC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = LAA5EN69T7;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = FloatingLabelTextField/Info.plist;
+				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hu.rumori.FloatingLabelTextField;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -259,13 +274,14 @@
 		A5EFBE411E4A70B600B16EDC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = LAA5EN69T7;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = FloatingLabelTextField/Info.plist;
+				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hu.rumori.FloatingLabelTextField;
@@ -294,6 +310,7 @@
 				A5EFBE411E4A70B600B16EDC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
