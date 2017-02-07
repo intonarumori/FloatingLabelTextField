@@ -71,6 +71,16 @@ open class FloatingLabelTextField: UITextField {
     // MARK: -
     
     @IBInspectable
+    open var titleFont: UIFont? {
+        set {
+            titleLabel.font = newValue
+        }
+        get {
+            return titleLabel.font
+        }
+    }
+    
+    @IBInspectable
     open var titleColor: UIColor? {
         didSet {
             updateTitle()
