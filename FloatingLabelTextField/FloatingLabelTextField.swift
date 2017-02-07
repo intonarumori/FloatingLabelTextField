@@ -204,7 +204,7 @@ open class FloatingLabelTextField: UITextField {
     }
 
     open override func clearButtonRect(forBounds bounds: CGRect) -> CGRect {
-        return super.clearButtonRect(forBounds: bounds).offsetBy(dx: 0, dy: titleHeight/2 - lineHeight/2)
+        return super.clearButtonRect(forBounds: bounds).offsetBy(dx: 0, dy: titleHeight/2 - lineHeight/2 + (textInsets.top - textInsets.bottom)/2)
     }
 
     // MARK: -
@@ -238,7 +238,7 @@ open class FloatingLabelTextField: UITextField {
         
         for subview in subviews {
             if subview != titleLabel && subview != lineView {
-                subview.backgroundColor = .green
+                subview.backgroundColor = UIColor(red: 0, green: 1, blue: 0, alpha: 0.5)
             }
         }
         
