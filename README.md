@@ -1,6 +1,9 @@
 
 # FloatingLabelTextField
 
+[![Build Status](https://travis-ci.org/intonarumori/FloatingLabelTextField.svg?branch=master)](https://travis-ci.org/intonarumori/FloatingLabelTextField)
+
+
 A Swift 3 implementation of the floating label UI pattern originally created by Matt D. Smith (@mds).
 
 This implementation features:  
