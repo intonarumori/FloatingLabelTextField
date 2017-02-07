@@ -69,5 +69,34 @@ open class FloatingLabelIconTextField: FloatingLabelTextField {
             leftViewMode = .never
         }
     }
+
+// MARK: -
+
+// Helper extension to make icon insets available in Interface Builder property inspector
+
+extension FloatingLabelIconTextField {
     
+    @IBInspectable
+    var iconInsetsTop: CGFloat {
+        set { iconInsets.top = newValue }
+        get { return iconInsets.top }
+    }
+    
+    @IBInspectable
+    var iconInsetsBottom: CGFloat {
+        set { iconInsets.bottom = newValue }
+        get { return iconInsets.bottom }
+    }
+    
+    @IBInspectable
+    var iconInsetsLeft: CGFloat {
+        set { iconInsets.left = newValue }
+        get { return iconInsets.left }
+    }
+    
+    @IBInspectable
+    var iconInsetsRight: CGFloat {
+        set { iconInsets.right = newValue }
+        get { return iconInsets.right }
+    }
 }

@@ -232,3 +232,34 @@ open class FloatingLabelTextField: UITextField {
         titleLabelAnimator.layout(titleLabel: titleLabel, for: self)
     }
 }
+
+// MARK: -
+
+// Helper extension to make text insets available in Interface Builder property inspector
+
+extension FloatingLabelTextField {
+    
+    @IBInspectable
+    var textInsetsTop: CGFloat {
+        set { textInsets.top = newValue }
+        get { return textInsets.top }
+    }
+
+    @IBInspectable
+    var textInsetsBottom: CGFloat {
+        set { textInsets.bottom = newValue }
+        get { return textInsets.bottom }
+    }
+
+    @IBInspectable
+    var textInsetsLeft: CGFloat {
+        set { textInsets.left = newValue }
+        get { return textInsets.left }
+    }
+
+    @IBInspectable
+    var textInsetsRight: CGFloat {
+        set { textInsets.right = newValue }
+        get { return textInsets.right }
+    }
+}
