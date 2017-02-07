@@ -84,13 +84,13 @@ open class FloatingLabelIconTextField: FloatingLabelTextField {
         if let iconImage = iconImage {
             let image = hasText ? iconImage.withRenderingMode(.alwaysTemplate) : iconImage
             iconView.image = image
-            iconView.backgroundColor = .magenta
             iconView.sizeToFit()
             leftView = iconView
             leftViewMode = .always
         }
         else {
             iconView.image = nil
+            leftView = nil
             leftViewMode = .never
         }
     }

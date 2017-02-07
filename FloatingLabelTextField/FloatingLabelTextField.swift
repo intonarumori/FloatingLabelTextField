@@ -18,7 +18,21 @@ public protocol FloatingLabelAnimator: class {
 open class FloatingLabelTextField: UITextField {
     
     @IBInspectable
-    open var textInsets: UIEdgeInsets = .zero {
+    open var placeholderColor: UIColor? {
+        didSet {
+            updatePlaceholder()
+        }
+    }
+    
+    @IBInspectable
+    open var placeholderFont: UIFont? {
+        didSet {
+            updatePlaceholder()
+        }
+    }
+    
+    @IBInspectable
+    open var textInsets: UIEdgeInsets = UIEdgeInsetsMake(5, 0, 5, 0) {
         didSet {
             setNeedsLayout()
             invalidateIntrinsicContentSize()
@@ -58,6 +72,20 @@ open class FloatingLabelTextField: UITextField {
     
     @IBInspectable
     open var titleColor: UIColor? {
+        didSet {
+            updateTitle()
+        }
+    }
+    
+    @IBInspectable
+    open var editingTitleColor: UIColor? {
+        didSet {
+            updateTitle()
+        }
+    }
+    
+    @IBInspectable
+    open var errorTitleColor: UIColor? {
         didSet {
             updateTitle()
         }
@@ -103,7 +131,7 @@ open class FloatingLabelTextField: UITextField {
     
     private(set) lazy var titleLabel: UILabel = {
         let titleLabel = UILabel()
-        titleLabel.backgroundColor = .brown
+        //titleLabel.backgroundColor = .brown
         titleLabel.font = UIFont.systemFont(ofSize: 13)
         return titleLabel
     }()
@@ -144,18 +172,35 @@ open class FloatingLabelTextField: UITextField {
     
     // MARK: - Updates
     
+    private func updatePlaceholder() {
+        if let placeholder = self.placeholder {
+            
+            var attributes = [String: Any]()
+            attributes[NSForegroundColorAttributeName] = placeholderColor
+            attributes[NSFontAttributeName] = placeholderFont ?? font
+
+            attributedPlaceholder = NSAttributedString(
+                string: placeholder,
+                attributes: attributes
+            )
+        } else {
+            attributedPlaceholder = nil
+        }
+    }
+    
     open func updateTitle() {
         
         if let errorMessage = errorMessage {
             titleLabel.text = errorMessage
-            titleLabel.textColor = .red
+            titleLabel.textColor = errorTitleColor ?? .red
         } else {
             if isFirstResponder {
                 titleLabel.text = selectedTitle ?? placeholder
+                titleLabel.textColor = editingTitleColor ?? titleColor ?? tintColor
             } else {
                 titleLabel.text = deselectedTitle ?? placeholder
+                titleLabel.textColor = titleColor ?? tintColor
             }
-            titleLabel.textColor = titleColor ?? textColor
         }
         setNeedsLayout()
     }
@@ -196,16 +241,28 @@ open class FloatingLabelTextField: UITextField {
     }
     
     open override func leftViewRect(forBounds bounds: CGRect) -> CGRect {
-        return super.leftViewRect(forBounds: bounds).offsetBy(dx: 0, dy: titleHeight/2 - lineHeight/2)
+        let rect = super.leftViewRect(forBounds: bounds)
+        return rect.offsetBy(dx: 0, dy: titleHeight/2 - lineHeight/2 + (textInsets.top - textInsets.bottom)/2)
     }
     
     open override func rightViewRect(forBounds bounds: CGRect) -> CGRect {
-        return super.rightViewRect(forBounds: bounds).offsetBy(dx: 0, dy: titleHeight/2 - lineHeight/2)
+        let rect = super.rightViewRect(forBounds: bounds)
+        return rect.offsetBy(dx: 0, dy: titleHeight/2 - lineHeight/2 + (textInsets.top - textInsets.bottom)/2)
     }
 
     open override func clearButtonRect(forBounds bounds: CGRect) -> CGRect {
-        return super.clearButtonRect(forBounds: bounds).offsetBy(dx: 0, dy: titleHeight/2 - lineHeight/2 + (textInsets.top - textInsets.bottom)/2)
+        let rect = super.clearButtonRect(forBounds: bounds)
+        return rect.offsetBy(dx: 0, dy: titleHeight/2 - lineHeight/2 + (textInsets.top - textInsets.bottom)/2)
     }
+    
+    // MARK: -
+    
+    open override func tintColorDidChange() {
+        super.tintColorDidChange()
+        updateLineView()
+        updateTitle()
+    }
+
 
     // MARK: -
     
@@ -218,14 +275,6 @@ open class FloatingLabelTextField: UITextField {
     open override var intrinsicContentSize: CGSize {
         get {
             return sizeThatFits(frame.size)
-            
-            var size = super.intrinsicContentSize
-            print("super intrinsicContentSize \(size)")
-            size.width += textInsets.left + textInsets.right
-            size.height += titleHeight + lineHeight + textInsets.top + textInsets.bottom
-            
-            print("intrinsicContentSize \(size)")
-            return size
         }
     }
     
@@ -236,11 +285,12 @@ open class FloatingLabelTextField: UITextField {
         
         lineView?.frame = CGRect(x: 0, y: bounds.maxY - lineHeight, width: bounds.width, height: lineHeight)
         
+        /*
         for subview in subviews {
             if subview != titleLabel && subview != lineView {
                 subview.backgroundColor = UIColor(red: 0, green: 1, blue: 0, alpha: 0.5)
             }
-        }
+        }*/
         
         titleLabelAnimator.layout(titleLabel: titleLabel, for: self)
     }

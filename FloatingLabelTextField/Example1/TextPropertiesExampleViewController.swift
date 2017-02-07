@@ -23,7 +23,7 @@ class TextPropertiesExampleViewController: UIViewController {
     func resignFirstResponderPressed() {
         textField.resignFirstResponder()
     }
-    
+
     @IBAction
     func errorButtonPressed() {
         if textField.errorMessage == nil {
@@ -34,6 +34,9 @@ class TextPropertiesExampleViewController: UIViewController {
             textField.errorMessage = nil
         }
     }
+
+    // MARK: -
+    
 
     @IBAction
     func placeholderControlChanged(_ segmentedControl: UISegmentedControl) {

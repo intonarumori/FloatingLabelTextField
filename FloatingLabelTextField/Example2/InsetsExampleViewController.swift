@@ -12,11 +12,15 @@ class InsetsExampleViewController: UIViewController {
 
     @IBOutlet var textField: FloatingLabelIconTextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
     // MARK: - User actions
+    
+    
+    @IBAction
+    func resignResponder() {
+        textField.resignFirstResponder()
+    }
+    
+    // MARK: -
     
     @IBAction
     func textInsetsTopChanged(_ segmentedControl: UISegmentedControl) {
