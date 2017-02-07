@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Insets Example View Controller-->
+        <!--Icon and inset properties-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="InsetsExampleViewController" customModule="iOS_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Icon and inset properties" id="BYZ-38-t0r" customClass="InsetsExampleViewController" customModule="iOS_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -44,14 +44,14 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dL2-IH-YOV">
-                                <rect key="frame" x="112" y="204" width="151" height="30"/>
+                                <rect key="frame" x="112" y="164" width="151" height="30"/>
                                 <state key="normal" title="Resign first responder"/>
                                 <connections>
                                     <action selector="resignResponder" destination="BYZ-38-t0r" eventType="touchUpInside" id="Min-NN-X41"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="k9r-qQ-GDc">
-                                <rect key="frame" x="47" y="258" width="95" height="53.5"/>
+                                <rect key="frame" x="47" y="218" width="95" height="53.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Icon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iwp-Iv-0Tv">
                                         <rect key="frame" x="0.0" y="0.0" width="95" height="20.5"/>
@@ -72,7 +72,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="vmO-R9-e3s">
-                                <rect key="frame" x="28" y="331.5" width="134" height="229"/>
+                                <rect key="frame" x="28" y="291.5" width="134" height="229"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iconInsetsTop" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QLR-H3-5Rr">
                                         <rect key="frame" x="0.0" y="0.0" width="134" height="20.5"/>
@@ -145,7 +145,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="RDq-j5-2Dt">
-                                <rect key="frame" x="243" y="258" width="77.5" height="53.5"/>
+                                <rect key="frame" x="243" y="218" width="77.5" height="53.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lineHeight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dW6-eQ-SYg">
                                         <rect key="frame" x="0.0" y="0.0" width="77.5" height="20.5"/>
@@ -167,7 +167,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Fiy-IT-gWV">
-                                <rect key="frame" x="216" y="331.5" width="131" height="229"/>
+                                <rect key="frame" x="216" y="291.5" width="131" height="229"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="textInsetsTop" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixy-dS-CQr">
                                         <rect key="frame" x="0.0" y="0.0" width="131" height="20.5"/>
@@ -243,7 +243,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Fiy-IT-gWV" firstAttribute="centerX" secondItem="RDq-j5-2Dt" secondAttribute="centerX" id="0Tl-q0-nZ8"/>
-                            <constraint firstItem="dL2-IH-YOV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="140" id="AR0-BL-ONF"/>
+                            <constraint firstItem="dL2-IH-YOV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="AR0-BL-ONF"/>
                             <constraint firstItem="k9r-qQ-GDc" firstAttribute="top" secondItem="dL2-IH-YOV" secondAttribute="bottom" constant="24" id="DWI-TR-Jqc"/>
                             <constraint firstItem="dL2-IH-YOV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EnW-gx-anh"/>
                             <constraint firstItem="vmO-R9-e3s" firstAttribute="top" secondItem="k9r-qQ-GDc" secondAttribute="bottom" constant="20" id="Fge-eb-K5i"/>
@@ -356,7 +356,7 @@
                             <outlet property="delegate" destination="w7h-7P-G11" id="nHf-lp-M3Y"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="tZb-Mq-moE"/>
+                    <navigationItem key="navigationItem" title="Examples" id="tZb-Mq-moE"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a68-8r-nY6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -378,10 +378,10 @@
             </objects>
             <point key="canvasLocation" x="-92" y="-684"/>
         </scene>
-        <!--Text Properties Example View Controller-->
+        <!--Text Properties-->
         <scene sceneID="Wcs-Mk-K2L">
             <objects>
-                <viewController id="unJ-BI-gqF" customClass="TextPropertiesExampleViewController" customModule="iOS_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Text Properties" id="unJ-BI-gqF" customClass="TextPropertiesExampleViewController" customModule="iOS_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jlm-zj-LOr"/>
                         <viewControllerLayoutGuide type="bottom" id="mr9-XU-7Kp"/>
@@ -520,10 +520,10 @@
             </objects>
             <point key="canvasLocation" x="2047" y="-1637"/>
         </scene>
-        <!--Colors Example View Controller-->
+        <!--Color properties-->
         <scene sceneID="hPE-LL-HBd">
             <objects>
-                <viewController id="MTb-W9-h0x" customClass="ColorsExampleViewController" customModule="iOS_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Color properties" id="MTb-W9-h0x" customClass="ColorsExampleViewController" customModule="iOS_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CaI-JW-3h5"/>
                         <viewControllerLayoutGuide type="bottom" id="HT8-a2-gOb"/>
