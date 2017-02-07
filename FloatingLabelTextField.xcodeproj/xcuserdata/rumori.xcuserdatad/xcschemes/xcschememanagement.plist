@@ -9,10 +9,20 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>FloatingLabelTextFieldTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>A5EFBE361E4A70B600B16EDC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A5EFBECF1E4A7CA400B16EDC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
