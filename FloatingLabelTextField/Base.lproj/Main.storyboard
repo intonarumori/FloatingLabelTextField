@@ -7,72 +7,259 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Insets Example View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FloatingLabelTextFieldExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="InsetsExampleViewController" customModule="FloatingLabelTextFieldExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="dFN-fO-6hM" customClass="FloatingLabelTextField" customModule="FloatingLabelTextFieldExample" customModuleProvider="target">
-                                <rect key="frame" x="36" y="123" width="303" height="37.5"/>
-                                <color key="backgroundColor" red="0.36147427721088438" green="1" blue="0.67450573979591832" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Lbc-Jn-V10" customClass="FloatingLabelIconTextField" customModule="FloatingLabelTextFieldExample" customModuleProvider="target">
-                                <rect key="frame" x="36" y="190.5" width="303" height="37.5"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="daniel@rumori.hu" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Lbc-Jn-V10" customClass="FloatingLabelIconTextField" customModule="FloatingLabelTextFieldExample" customModuleProvider="target">
+                                <rect key="frame" x="36" y="94" width="303" height="52.5"/>
                                 <color key="backgroundColor" red="0.36147427721088438" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="Email"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="Envelope"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="SFq-XC-uHK">
-                                <rect key="frame" x="36" y="258" width="303" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dL2-IH-YOV">
+                                <rect key="frame" x="112" y="204" width="151" height="30"/>
+                                <state key="normal" title="Resign first responder"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="k9r-qQ-GDc">
+                                <rect key="frame" x="25" y="258" width="139" height="53.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Icon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iwp-Iv-0Tv">
+                                        <rect key="frame" x="0.0" y="0.0" width="139" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7qh-Kr-0oq">
+                                        <rect key="frame" x="0.0" y="25.5" width="139" height="29"/>
+                                        <segments>
+                                            <segment title="None"/>
+                                            <segment title="Envelope"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="iconChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="XRl-mY-yzb"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="vmO-R9-e3s">
+                                <rect key="frame" x="28" y="331.5" width="134" height="229"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iconInsetsTop" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QLR-H3-5Rr">
+                                        <rect key="frame" x="0.0" y="0.0" width="134" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Co5-hd-39B">
+                                        <rect key="frame" x="0.0" y="25.5" width="134" height="29"/>
+                                        <segments>
+                                            <segment title="0"/>
+                                            <segment title="5"/>
+                                            <segment title="10"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="iconInsetsTopChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="psR-La-HWY"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iconInsetsBottom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsi-Lq-Sue">
+                                        <rect key="frame" x="0.0" y="58.5" width="134" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OYX-lH-ySO">
+                                        <rect key="frame" x="0.0" y="84" width="134" height="29"/>
+                                        <segments>
+                                            <segment title="0"/>
+                                            <segment title="5"/>
+                                            <segment title="10"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="iconInsetsBottomChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="dlK-2s-hDz"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iconInsetsLeft" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ka-j4-CTz">
+                                        <rect key="frame" x="0.0" y="117" width="134" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="b8Y-IF-Ghw">
+                                        <rect key="frame" x="0.0" y="142.5" width="134" height="29"/>
+                                        <segments>
+                                            <segment title="0"/>
+                                            <segment title="5"/>
+                                            <segment title="10"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="iconInsetsLeftChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Yi0-yi-8gV"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iconInsetsRight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nWy-Bw-tdr">
+                                        <rect key="frame" x="0.0" y="175.5" width="134" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Fn5-8x-zkf">
+                                        <rect key="frame" x="0.0" y="201" width="134" height="29"/>
+                                        <segments>
+                                            <segment title="0"/>
+                                            <segment title="5"/>
+                                            <segment title="10"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="iconInsetsRightChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="F5g-WZ-qHE"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="RDq-j5-2Dt">
+                                <rect key="frame" x="243" y="258" width="77.5" height="53.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lineHeight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dW6-eQ-SYg">
+                                        <rect key="frame" x="0.0" y="0.0" width="77.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="quf-Yh-XP6">
+                                        <rect key="frame" x="0.0" y="25.5" width="77.5" height="29"/>
+                                        <segments>
+                                            <segment title="0"/>
+                                            <segment title="1"/>
+                                            <segment title="2"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="lineHeightChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="9ls-kn-gJC"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Fiy-IT-gWV">
+                                <rect key="frame" x="216" y="331.5" width="131" height="229"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="textInsetsTop" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixy-dS-CQr">
+                                        <rect key="frame" x="0.0" y="0.0" width="131" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="VTR-oW-2ho">
+                                        <rect key="frame" x="0.0" y="25.5" width="131" height="29"/>
+                                        <segments>
+                                            <segment title="0"/>
+                                            <segment title="5"/>
+                                            <segment title="10"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="textInsetsTopChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="2H1-ue-llD"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="textInsetsBottom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5e-if-PTW">
+                                        <rect key="frame" x="0.0" y="58.5" width="131" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1gB-kk-NW3">
+                                        <rect key="frame" x="0.0" y="84" width="131" height="29"/>
+                                        <segments>
+                                            <segment title="0"/>
+                                            <segment title="5"/>
+                                            <segment title="10"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="textInsetsBottomChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="15n-wH-6Ye"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="textInsetsLeft" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4br-1D-dfu">
+                                        <rect key="frame" x="0.0" y="117" width="131" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Mb9-Sc-9gf">
+                                        <rect key="frame" x="0.0" y="142.5" width="131" height="29"/>
+                                        <segments>
+                                            <segment title="0"/>
+                                            <segment title="5"/>
+                                            <segment title="10"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="textInsetsLeftChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="MjG-Nm-kqY"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="textInsetsRight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6Q-AI-y4B">
+                                        <rect key="frame" x="0.0" y="175.5" width="131" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="b9n-XV-z5p">
+                                        <rect key="frame" x="0.0" y="201" width="131" height="29"/>
+                                        <segments>
+                                            <segment title="0"/>
+                                            <segment title="5"/>
+                                            <segment title="10"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="textInsetsRightChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="hZX-wl-hSt"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fG7-fS-qsj">
+                                <rect key="frame" x="36" y="166" width="303" height="30"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="dFN-fO-6hM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="GKM-3T-sjg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="SFq-XC-uHK" secondAttribute="trailing" constant="20" id="JsL-o8-TRA"/>
-                            <constraint firstItem="SFq-XC-uHK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="QlO-zr-l11"/>
+                            <constraint firstItem="Fiy-IT-gWV" firstAttribute="centerX" secondItem="RDq-j5-2Dt" secondAttribute="centerX" id="0Tl-q0-nZ8"/>
+                            <constraint firstItem="dL2-IH-YOV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="140" id="AR0-BL-ONF"/>
+                            <constraint firstItem="k9r-qQ-GDc" firstAttribute="top" secondItem="dL2-IH-YOV" secondAttribute="bottom" constant="24" id="DWI-TR-Jqc"/>
+                            <constraint firstItem="dL2-IH-YOV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EnW-gx-anh"/>
+                            <constraint firstItem="vmO-R9-e3s" firstAttribute="top" secondItem="k9r-qQ-GDc" secondAttribute="bottom" constant="20" id="Fge-eb-K5i"/>
+                            <constraint firstItem="fG7-fS-qsj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="LPb-2V-mJV"/>
+                            <constraint firstItem="Fiy-IT-gWV" firstAttribute="top" secondItem="RDq-j5-2Dt" secondAttribute="bottom" constant="20" id="Lgy-hr-iRZ"/>
+                            <constraint firstItem="fG7-fS-qsj" firstAttribute="top" secondItem="Lbc-Jn-V10" secondAttribute="bottom" constant="19.5" id="Rge-xp-mcK"/>
+                            <constraint firstItem="RDq-j5-2Dt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.5" id="UFL-EC-pVp"/>
                             <constraint firstItem="Lbc-Jn-V10" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="XVs-cs-pRM"/>
+                            <constraint firstItem="RDq-j5-2Dt" firstAttribute="top" secondItem="dL2-IH-YOV" secondAttribute="bottom" constant="24" id="cFf-8c-FPd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fG7-fS-qsj" secondAttribute="trailing" constant="20" id="cQk-Xv-eh0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Lbc-Jn-V10" secondAttribute="trailing" constant="20" id="fbH-Qf-e83"/>
-                            <constraint firstItem="Lbc-Jn-V10" firstAttribute="top" secondItem="dFN-fO-6hM" secondAttribute="bottom" constant="30" id="mfS-ue-Zr1"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="dFN-fO-6hM" secondAttribute="trailing" constant="20" id="qpK-h6-gVB"/>
-                            <constraint firstItem="SFq-XC-uHK" firstAttribute="top" secondItem="Lbc-Jn-V10" secondAttribute="bottom" constant="30" id="sI2-ew-GoU"/>
-                            <constraint firstItem="dFN-fO-6hM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="59" id="vA2-PJ-Gk0"/>
+                            <constraint firstItem="vmO-R9-e3s" firstAttribute="centerX" secondItem="k9r-qQ-GDc" secondAttribute="centerX" id="jP5-c5-s9i"/>
+                            <constraint firstItem="k9r-qQ-GDc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.5" id="uTP-nI-LVF"/>
+                            <constraint firstItem="Lbc-Jn-V10" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="v22-g1-eSI"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="floatingLabelTextField1" destination="dFN-fO-6hM" id="Xn3-ec-IlC"/>
-                        <outlet property="floatingLabelTextField2" destination="Lbc-Jn-V10" id="Vxh-LV-T3S"/>
+                        <outlet property="textField" destination="Lbc-Jn-V10" id="kWQ-j9-taJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1630" y="-285"/>
+            <point key="canvasLocation" x="1629.5999999999999" y="-285.60719640179911"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="fZc-cm-Xkm">
@@ -176,28 +363,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Placeholder" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="vEk-i2-qBC" customClass="FloatingLabelTextField" customModule="FloatingLabelTextFieldExample" customModuleProvider="target">
-                                <rect key="frame" x="36" y="122" width="303" height="37.5"/>
+                                <rect key="frame" x="36" y="122" width="303" height="52.5"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gwc-ZM-vEt">
-                                <rect key="frame" x="122" y="244" width="131" height="30"/>
+                                <rect key="frame" x="122" y="259" width="131" height="30"/>
                                 <state key="normal" title="Add error message"/>
                                 <connections>
                                     <action selector="errorButtonPressed" destination="unJ-BI-gqF" eventType="touchUpInside" id="1tA-oC-Hxz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xve-ap-VkZ">
-                                <rect key="frame" x="112" y="190" width="151" height="30"/>
+                                <rect key="frame" x="112" y="205" width="151" height="30"/>
                                 <state key="normal" title="Resign first responder"/>
                                 <connections>
                                     <action selector="resignFirstResponderPressed" destination="unJ-BI-gqF" eventType="touchUpInside" id="roW-HL-ys3"/>
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="iiP-RA-vOD">
-                                <rect key="frame" x="90" y="320" width="195" height="29"/>
+                                <rect key="frame" x="90" y="335" width="195" height="29"/>
                                 <segments>
                                     <segment title="None"/>
                                     <segment title="&quot;Placeholder&quot;"/>
@@ -207,20 +394,20 @@
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JF8-NC-Kp9">
-                                <rect key="frame" x="36" y="353" width="303" height="43"/>
+                                <rect key="frame" x="36" y="368" width="303" height="43"/>
                                 <string key="text">Placeholder is an inherited property from UITextField. It is used on the floating label if both "deselectedTitle" and "selectedTitle" are set to nil.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="placeholder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qa-D8-mNt">
-                                <rect key="frame" x="142" y="294" width="91" height="21"/>
+                                <rect key="frame" x="142" y="309" width="91" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0cI-ZL-stn">
-                                <rect key="frame" x="66" y="452" width="243" height="29"/>
+                                <rect key="frame" x="66" y="467" width="243" height="29"/>
                                 <segments>
                                     <segment title="None"/>
                                     <segment title="&quot;Deselected title&quot;"/>
@@ -230,19 +417,19 @@
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="deselectedTitle is used when it's not nil, the text field is not editing and the input text is at least 1 character long." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYv-YB-SsP">
-                                <rect key="frame" x="36" y="485" width="303" height="43"/>
+                                <rect key="frame" x="36" y="500" width="303" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="deselectedTitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVX-JE-hkB">
-                                <rect key="frame" x="128.5" y="426" width="118" height="21"/>
+                                <rect key="frame" x="128.5" y="441" width="118" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ya4-cu-ylG">
-                                <rect key="frame" x="81" y="584" width="213" height="29"/>
+                                <rect key="frame" x="81" y="599" width="213" height="29"/>
                                 <segments>
                                     <segment title="None"/>
                                     <segment title="&quot;Selected title&quot;"/>
@@ -252,13 +439,13 @@
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="selectedTitle is used when it's not nil, the text field is editing and the input is at least 1 character long." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmQ-uK-X61">
-                                <rect key="frame" x="30" y="617" width="303" height="29"/>
+                                <rect key="frame" x="30" y="632" width="303" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="selectedTitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zzA-TN-PTE">
-                                <rect key="frame" x="138" y="558" width="99" height="21"/>
+                                <rect key="frame" x="138" y="573" width="99" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -306,7 +493,4 @@
             <point key="canvasLocation" x="1631" y="-1043"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Envelope" width="20" height="14"/>
-    </resources>
 </document>

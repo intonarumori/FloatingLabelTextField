@@ -16,6 +16,7 @@
 		A5767C851E4942B300CE7A9C /* FloatingLabelIconTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5767C841E4942B300CE7A9C /* FloatingLabelIconTextField.swift */; };
 		A5767C871E49D76200CE7A9C /* FloatingLabelAnimators.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5767C861E49D76200CE7A9C /* FloatingLabelAnimators.swift */; };
 		A5767C8C1E49EA4100CE7A9C /* TextPropertiesExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5767C8B1E49EA4100CE7A9C /* TextPropertiesExampleViewController.swift */; };
+		A5767C911E4A14DB00CE7A9C /* InsetsExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5767C901E4A14DB00CE7A9C /* InsetsExampleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		A5767C841E4942B300CE7A9C /* FloatingLabelIconTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingLabelIconTextField.swift; sourceTree = "<group>"; };
 		A5767C861E49D76200CE7A9C /* FloatingLabelAnimators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingLabelAnimators.swift; sourceTree = "<group>"; };
 		A5767C8B1E49EA4100CE7A9C /* TextPropertiesExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextPropertiesExampleViewController.swift; sourceTree = "<group>"; };
+		A5767C901E4A14DB00CE7A9C /* InsetsExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsetsExampleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				A5767C8A1E49EA2F00CE7A9C /* Example1 */,
+				A5767C8F1E4A14CE00CE7A9C /* Example2 */,
 				A5767C821E49396E00CE7A9C /* FloatingLabelTextField.swift */,
 				A5767C841E4942B300CE7A9C /* FloatingLabelIconTextField.swift */,
 				A5767C861E49D76200CE7A9C /* FloatingLabelAnimators.swift */,
@@ -83,6 +86,14 @@
 				A5767C8B1E49EA4100CE7A9C /* TextPropertiesExampleViewController.swift */,
 			);
 			path = Example1;
+			sourceTree = "<group>";
+		};
+		A5767C8F1E4A14CE00CE7A9C /* Example2 */ = {
+			isa = PBXGroup;
+			children = (
+				A5767C901E4A14DB00CE7A9C /* InsetsExampleViewController.swift */,
+			);
+			path = Example2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5767C911E4A14DB00CE7A9C /* InsetsExampleViewController.swift in Sources */,
 				A5767C871E49D76200CE7A9C /* FloatingLabelAnimators.swift in Sources */,
 				A5767C8C1E49EA4100CE7A9C /* TextPropertiesExampleViewController.swift in Sources */,
 				A5767C731E49373A00CE7A9C /* ViewController.swift in Sources */,

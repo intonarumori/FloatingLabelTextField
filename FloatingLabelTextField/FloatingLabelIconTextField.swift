@@ -11,8 +11,7 @@ import UIKit
 @IBDesignable
 open class FloatingLabelIconTextField: FloatingLabelTextField {
 
-    
-    open var iconInsets: UIEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 5) {
+    open var iconInsets: UIEdgeInsets = .zero {
         didSet {
             setNeedsLayout()
         }
@@ -55,11 +54,37 @@ open class FloatingLabelIconTextField: FloatingLabelTextField {
     
     // MARK: -
     
+    open override func editingRect(forBounds bounds: CGRect) -> CGRect {
+        var rect = super.editingRect(forBounds: bounds)
+        let offset = iconInsets.right
+        rect.origin.x += offset
+        rect.size.width -= offset
+        return rect
+    }
+    
+    open override func textRect(forBounds bounds: CGRect) -> CGRect {
+        var rect = super.textRect(forBounds: bounds)
+        let offset = iconInsets.right
+        rect.origin.x += offset
+        rect.size.width -= offset
+        return rect
+    }
+    
+    open override func leftViewRect(forBounds bounds: CGRect) -> CGRect {
+        var rect = super.leftViewRect(forBounds: bounds)
+        rect.origin.x += iconInsets.left
+        rect.origin.y += iconInsets.top
+        return rect
+    }
+    
+    // MARK: -
+    
     open func updateIconView() {
         
         if let iconImage = iconImage {
             let image = hasText ? iconImage.withRenderingMode(.alwaysTemplate) : iconImage
             iconView.image = image
+            iconView.backgroundColor = .magenta
             iconView.sizeToFit()
             leftView = iconView
             leftViewMode = .always
@@ -69,6 +94,9 @@ open class FloatingLabelIconTextField: FloatingLabelTextField {
             leftViewMode = .never
         }
     }
+}
+
+
 
 // MARK: -
 

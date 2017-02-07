@@ -18,9 +18,10 @@ public protocol FloatingLabelAnimator: class {
 open class FloatingLabelTextField: UITextField {
     
     @IBInspectable
-    open var textInsets: UIEdgeInsets = UIEdgeInsetsMake(5, 0, 5, 0) {
+    open var textInsets: UIEdgeInsets = .zero {
         didSet {
             setNeedsLayout()
+            invalidateIntrinsicContentSize()
         }
     }
     
@@ -28,11 +29,19 @@ open class FloatingLabelTextField: UITextField {
     open var lineHeight: CGFloat = 0 {
         didSet {
             updateLineView()
+            invalidateIntrinsicContentSize()
         }
     }
     
     @IBInspectable
     open var lineColor: UIColor? {
+        didSet {
+            updateLineView()
+        }
+    }
+    
+    @IBInspectable
+    open var editingLineColor: UIColor? {
         didSet {
             updateLineView()
         }
@@ -94,7 +103,7 @@ open class FloatingLabelTextField: UITextField {
     
     private(set) lazy var titleLabel: UILabel = {
         let titleLabel = UILabel()
-        titleLabel.textColor = .red
+        titleLabel.backgroundColor = .brown
         titleLabel.font = UIFont.systemFont(ofSize: 13)
         return titleLabel
     }()
@@ -175,17 +184,15 @@ open class FloatingLabelTextField: UITextField {
     // MARK: - Supporting frame overrides
     
     open override func editingRect(forBounds bounds: CGRect) -> CGRect {
-        var rect = super.editingRect(forBounds: bounds).offsetBy(dx: 0, dy: titleHeight/2 - lineHeight/2)
-        rect.origin.x += textInsets.left
-        rect.size.width -= textInsets.left + textInsets.right
-        return rect
+        
+        let rect = super.editingRect(forBounds: bounds)
+        return UIEdgeInsetsInsetRect(rect, UIEdgeInsetsMake(titleHeight + textInsets.top, textInsets.left, lineHeight + textInsets.bottom, textInsets.right))
     }
     
     open override func textRect(forBounds bounds: CGRect) -> CGRect {
-        var rect = super.editingRect(forBounds: bounds).offsetBy(dx: 0, dy: titleHeight/2 - lineHeight/2)
-        rect.origin.x += textInsets.left
-        rect.size.width -= textInsets.left + textInsets.right
-        return rect
+
+        let rect = super.textRect(forBounds: bounds)
+        return UIEdgeInsetsInsetRect(rect, UIEdgeInsetsMake(titleHeight + textInsets.top, textInsets.left, lineHeight + textInsets.bottom, textInsets.right))
     }
     
     open override func leftViewRect(forBounds bounds: CGRect) -> CGRect {
@@ -210,9 +217,14 @@ open class FloatingLabelTextField: UITextField {
     
     open override var intrinsicContentSize: CGSize {
         get {
+            return sizeThatFits(frame.size)
+            
             var size = super.intrinsicContentSize
+            print("super intrinsicContentSize \(size)")
             size.width += textInsets.left + textInsets.right
             size.height += titleHeight + lineHeight + textInsets.top + textInsets.bottom
+            
+            print("intrinsicContentSize \(size)")
             return size
         }
     }
@@ -223,12 +235,13 @@ open class FloatingLabelTextField: UITextField {
         super.layoutSubviews()
         
         lineView?.frame = CGRect(x: 0, y: bounds.maxY - lineHeight, width: bounds.width, height: lineHeight)
-
-        //print("\(Date().timeIntervalSince1970) layoutSubviews")
-        //print("layers", self.subviews)
-        //self.subviews[1].backgroundColor = .green
-        //print("layers", self.layer.sublayers?.count)
-
+        
+        for subview in subviews {
+            if subview != titleLabel && subview != lineView {
+                subview.backgroundColor = .green
+            }
+        }
+        
         titleLabelAnimator.layout(titleLabel: titleLabel, for: self)
     }
 }
