@@ -44,14 +44,14 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dL2-IH-YOV">
-                                <rect key="frame" x="112" y="164" width="151" height="30"/>
+                                <rect key="frame" x="112" y="174" width="151" height="30"/>
                                 <state key="normal" title="Resign first responder"/>
                                 <connections>
                                     <action selector="resignResponder" destination="BYZ-38-t0r" eventType="touchUpInside" id="Min-NN-X41"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="k9r-qQ-GDc">
-                                <rect key="frame" x="47" y="218" width="95" height="53.5"/>
+                                <rect key="frame" x="47" y="228" width="95" height="53.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Icon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iwp-Iv-0Tv">
                                         <rect key="frame" x="0.0" y="0.0" width="95" height="20.5"/>
@@ -72,7 +72,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="vmO-R9-e3s">
-                                <rect key="frame" x="28" y="291.5" width="134" height="229"/>
+                                <rect key="frame" x="28" y="301.5" width="134" height="229"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iconInsetsTop" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QLR-H3-5Rr">
                                         <rect key="frame" x="0.0" y="0.0" width="134" height="20.5"/>
@@ -145,7 +145,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="RDq-j5-2Dt">
-                                <rect key="frame" x="243" y="218" width="77.5" height="53.5"/>
+                                <rect key="frame" x="243" y="228" width="77.5" height="53.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lineHeight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dW6-eQ-SYg">
                                         <rect key="frame" x="0.0" y="0.0" width="77.5" height="20.5"/>
@@ -167,7 +167,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Fiy-IT-gWV">
-                                <rect key="frame" x="216" y="291.5" width="131" height="229"/>
+                                <rect key="frame" x="216" y="301.5" width="131" height="229"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="textInsetsTop" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixy-dS-CQr">
                                         <rect key="frame" x="0.0" y="0.0" width="131" height="20.5"/>
@@ -239,20 +239,28 @@
                                     </segmentedControl>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FloatingLabelIconTextField" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpF-pR-uQU">
+                                <rect key="frame" x="118.5" y="139" width="139" height="13.5"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Fiy-IT-gWV" firstAttribute="centerX" secondItem="RDq-j5-2Dt" secondAttribute="centerX" id="0Tl-q0-nZ8"/>
-                            <constraint firstItem="dL2-IH-YOV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="AR0-BL-ONF"/>
+                            <constraint firstItem="dL2-IH-YOV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="110" id="AR0-BL-ONF"/>
                             <constraint firstItem="k9r-qQ-GDc" firstAttribute="top" secondItem="dL2-IH-YOV" secondAttribute="bottom" constant="24" id="DWI-TR-Jqc"/>
                             <constraint firstItem="dL2-IH-YOV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EnW-gx-anh"/>
                             <constraint firstItem="vmO-R9-e3s" firstAttribute="top" secondItem="k9r-qQ-GDc" secondAttribute="bottom" constant="20" id="Fge-eb-K5i"/>
+                            <constraint firstItem="cpF-pR-uQU" firstAttribute="top" secondItem="Lbc-Jn-V10" secondAttribute="bottom" constant="8" id="HFo-Ui-F1c"/>
                             <constraint firstItem="Fiy-IT-gWV" firstAttribute="top" secondItem="RDq-j5-2Dt" secondAttribute="bottom" constant="20" id="Lgy-hr-iRZ"/>
                             <constraint firstItem="RDq-j5-2Dt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.5" id="UFL-EC-pVp"/>
                             <constraint firstItem="Lbc-Jn-V10" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="XVs-cs-pRM"/>
                             <constraint firstItem="RDq-j5-2Dt" firstAttribute="top" secondItem="dL2-IH-YOV" secondAttribute="bottom" constant="24" id="cFf-8c-FPd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Lbc-Jn-V10" secondAttribute="trailing" constant="20" id="fbH-Qf-e83"/>
                             <constraint firstItem="vmO-R9-e3s" firstAttribute="centerX" secondItem="k9r-qQ-GDc" secondAttribute="centerX" id="jP5-c5-s9i"/>
+                            <constraint firstItem="cpF-pR-uQU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lxB-Z8-9rX"/>
                             <constraint firstItem="k9r-qQ-GDc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.5" id="uTP-nI-LVF"/>
                             <constraint firstItem="Lbc-Jn-V10" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="v22-g1-eSI"/>
                         </constraints>
