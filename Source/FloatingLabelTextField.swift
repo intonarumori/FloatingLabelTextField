@@ -221,11 +221,11 @@ open class FloatingLabelTextField: UITextField {
             titleLabel.text = errorMessage
             titleLabel.textColor = errorTitleColor ?? .red
         } else {
-            if isFirstResponder {
-                titleLabel.text = selectedTitle ?? placeholder
+            if isEditing {
+                titleLabel.text = editingTitle ?? title ?? placeholder
                 titleLabel.textColor = editingTitleColor ?? titleColor ?? tintColor
             } else {
-                titleLabel.text = deselectedTitle ?? placeholder
+                titleLabel.text = title ?? placeholder
                 titleLabel.textColor = titleColor ?? tintColor
             }
         }
