@@ -93,18 +93,28 @@ open class FloatingLabelTextField: UITextField {
         }
     }
     
+    open override var placeholder: String? {
+        set {
+            super.placeholder = newValue
+            updateTitle()
+        }
+        get {
+            return super.placeholder
+        }
+    }
+    
     
     // MARK: -
     
     @IBInspectable
-    open var deselectedTitle: String? {
+    open var title: String? {
         didSet {
             updateTitle()
         }
     }
     
     @IBInspectable
-    open var selectedTitle: String? {
+    open var editingTitle: String? {
         didSet {
             updateTitle()
         }
