@@ -143,7 +143,6 @@ open class FloatingLabelTextField: UITextField {
     
     private(set) lazy var titleLabel: UILabel = {
         let titleLabel = UILabel()
-        //titleLabel.backgroundColor = .brown
         titleLabel.font = UIFont.systemFont(ofSize: 13)
         return titleLabel
     }()
