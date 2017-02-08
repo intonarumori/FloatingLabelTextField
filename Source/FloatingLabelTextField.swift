@@ -166,11 +166,10 @@ open class FloatingLabelTextField: UITextField {
         addSubview(titleLabel)
         updateLineView()
 
-        addTarget(self, action: #selector(updateTitle), for: .editingChanged)
-        addTarget(self, action: #selector(updateTitle), for: .editingDidEnd)
-        addTarget(self, action: #selector(updateTitle), for: .editingDidBegin)
+        addTarget(self, action: #selector(editingChanged), for: .editingChanged)
+        addTarget(self, action: #selector(editingDidEnd), for: .editingDidEnd)
+        addTarget(self, action: #selector(editingDidBegin), for: .editingDidBegin)
     }
-    
     
     // MARK: - Interface Builder
     
@@ -182,6 +181,23 @@ open class FloatingLabelTextField: UITextField {
     }
     
     // MARK: - Updates
+    
+    @objc
+    private func editingChanged() {
+        updateTitle()
+    }
+    
+    @objc
+    private func editingDidEnd() {
+        updateTitle()
+        updateLineView()
+    }
+    
+    @objc
+    private func editingDidBegin() {
+        updateTitle()
+        updateLineView()
+    }
     
     private func updatePlaceholder() {
         if let placeholder = self.placeholder {
@@ -199,7 +215,7 @@ open class FloatingLabelTextField: UITextField {
         }
     }
     
-    open func updateTitle() {
+    private func updateTitle() {
         
         if let errorMessage = errorMessage {
             titleLabel.text = errorMessage
