@@ -18,5 +18,6 @@ This implementation features:
 
 ### CocoaPods
 
-We only support manual installation at the moment. Add the following line to your podfile:
-`pod 'RMFloatingLabelTextField', :git => 'https://github.com/intonarumori/FloatingLabelTextField.git'` and run `pod install`
+We only support manual installation at the moment. Add the following line to your podfile:  
+`pod 'RMFloatingLabelTextField', :git => 'https://github.com/intonarumori/FloatingLabelTextField.git'`  
+and run `pod install`
