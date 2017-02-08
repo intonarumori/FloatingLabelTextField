@@ -61,13 +61,6 @@ open class FloatingLabelTextField: UITextField {
         }
     }
     
-    @IBInspectable
-    open var selectedLineColor: UIColor? {
-        didSet {
-            updateLineView()
-        }
-    }
-    
     // MARK: -
     
     @IBInspectable
@@ -225,8 +218,13 @@ open class FloatingLabelTextField: UITextField {
                 self.lineView = lineView
                 return lineView
                 }()
-            
-            lineView.backgroundColor = lineColor ?? tintColor
+
+            if isEditing {
+                lineView.backgroundColor = editingLineColor ?? lineColor ?? tintColor
+            } else {
+                lineView.backgroundColor = lineColor ?? tintColor
+            }
+
             addSubview(lineView)
             setNeedsLayout()
             
