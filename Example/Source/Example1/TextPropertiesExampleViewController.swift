@@ -50,22 +50,22 @@ class TextPropertiesExampleViewController: UIViewController {
     }
 
     @IBAction
-    func selectedTitleControlChanged(_ segmentedControl: UISegmentedControl) {
+    func editingTitleControlChanged(_ segmentedControl: UISegmentedControl) {
         switch segmentedControl.selectedSegmentIndex {
         case 1:
-            textField.selectedTitle = NSLocalizedString("Selected title", comment: "")
+            textField.editingTitle = NSLocalizedString("Editing title", comment: "")
         default:
-            textField.selectedTitle = nil
+            textField.editingTitle = nil
         }
     }
 
     @IBAction
-    func deselectedTitleControlChanged(_ segmentedControl: UISegmentedControl) {
+    func titleControlChanged(_ segmentedControl: UISegmentedControl) {
         switch segmentedControl.selectedSegmentIndex {
         case 1:
-            textField.deselectedTitle = NSLocalizedString("Deselected title", comment: "")
+            textField.title = NSLocalizedString("Title", comment: "")
         default:
-            textField.deselectedTitle = nil
+            textField.title = nil
         }
     }
 }

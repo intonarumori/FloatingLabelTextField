@@ -30,7 +30,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="Email"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Email"/>
                                     <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="Envelope"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iconInsetsRight">
                                         <real key="value" value="5"/>
@@ -420,7 +420,7 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="iiP-RA-vOD">
-                                <rect key="frame" x="90" y="257" width="195" height="29"/>
+                                <rect key="frame" x="90" y="267" width="195" height="29"/>
                                 <segments>
                                     <segment title="None"/>
                                     <segment title="&quot;Placeholder&quot;"/>
@@ -430,58 +430,58 @@
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JF8-NC-Kp9">
-                                <rect key="frame" x="36" y="290" width="303" height="43"/>
-                                <string key="text">Placeholder is an inherited property from UITextField. It is used on the floating label if both "deselectedTitle" and "selectedTitle" are set to nil.</string>
+                                <rect key="frame" x="36" y="300" width="303" height="43"/>
+                                <string key="text">"placeholder" is an inherited property from UITextField. It is used on the floating label if both "title" and "editingTitle" are set to nil.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="placeholder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qa-D8-mNt">
-                                <rect key="frame" x="142" y="231" width="91" height="21"/>
+                                <rect key="frame" x="142" y="241" width="91" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0cI-ZL-stn">
-                                <rect key="frame" x="66" y="369" width="243" height="29"/>
+                                <rect key="frame" x="135" y="379" width="105" height="29"/>
                                 <segments>
                                     <segment title="None"/>
-                                    <segment title="&quot;Deselected title&quot;"/>
+                                    <segment title="&quot;Title&quot;"/>
                                 </segments>
                                 <connections>
-                                    <action selector="deselectedTitleControlChanged:" destination="unJ-BI-gqF" eventType="valueChanged" id="u5k-Kr-Ofz"/>
+                                    <action selector="titleControlChanged:" destination="unJ-BI-gqF" eventType="valueChanged" id="Fi2-Oa-aTU"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="deselectedTitle is used when it's not nil, the text field is not editing and the input text is at least 1 character long." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYv-YB-SsP">
-                                <rect key="frame" x="36" y="402" width="303" height="43"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;title&quot; is used when it's not nil, the text field is not editing and the input text is at least 1 character long." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYv-YB-SsP">
+                                <rect key="frame" x="36" y="412" width="303" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="deselectedTitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVX-JE-hkB">
-                                <rect key="frame" x="128.5" y="343" width="118" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVX-JE-hkB">
+                                <rect key="frame" x="173" y="353" width="29" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ya4-cu-ylG">
-                                <rect key="frame" x="81" y="481" width="213" height="29"/>
+                                <rect key="frame" x="93" y="477" width="189" height="29"/>
                                 <segments>
                                     <segment title="None"/>
-                                    <segment title="&quot;Selected title&quot;"/>
+                                    <segment title="&quot;Editing title&quot;"/>
                                 </segments>
                                 <connections>
-                                    <action selector="selectedTitleControlChanged:" destination="unJ-BI-gqF" eventType="valueChanged" id="mTS-h6-YBE"/>
+                                    <action selector="editingTitleControlChanged:" destination="unJ-BI-gqF" eventType="valueChanged" id="Kya-Ih-gld"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="selectedTitle is used when it's not nil, the text field is editing and the input is at least 1 character long." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmQ-uK-X61">
-                                <rect key="frame" x="30" y="514" width="303" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;editingTitle&quot; is used when it's not nil, the text field is editing and the input is at least 1 character long." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmQ-uK-X61">
+                                <rect key="frame" x="30" y="510" width="303" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="selectedTitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zzA-TN-PTE">
-                                <rect key="frame" x="138" y="455" width="99" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="editingTitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zzA-TN-PTE">
+                                <rect key="frame" x="144.5" y="451" width="86" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -490,7 +490,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="zzA-TN-PTE" firstAttribute="centerX" secondItem="xim-ke-U4C" secondAttribute="centerX" id="39U-fG-cIf"/>
-                            <constraint firstItem="6qa-D8-mNt" firstAttribute="top" secondItem="Gwc-ZM-vEt" secondAttribute="bottom" constant="10" id="4TB-SM-Hh6"/>
+                            <constraint firstItem="6qa-D8-mNt" firstAttribute="top" secondItem="Gwc-ZM-vEt" secondAttribute="bottom" constant="20" id="4TB-SM-Hh6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dmQ-uK-X61" secondAttribute="trailing" constant="26" id="4ed-wr-AD2"/>
                             <constraint firstItem="tVX-JE-hkB" firstAttribute="top" secondItem="JF8-NC-Kp9" secondAttribute="bottom" constant="10" id="5st-Yk-Aug"/>
                             <constraint firstItem="iiP-RA-vOD" firstAttribute="top" secondItem="6qa-D8-mNt" secondAttribute="bottom" constant="5" id="B4l-TW-r2S"/>
@@ -526,7 +526,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9LH-PF-iPW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2047" y="-1637"/>
+            <point key="canvasLocation" x="2045.5999999999999" y="-1637.6311844077961"/>
         </scene>
         <!--Color properties-->
         <scene sceneID="hPE-LL-HBd">
@@ -547,11 +547,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="Selected title"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="editingTitle" value="Selected title"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="deselectedTitle" value="Deselected title"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Deselected title"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ByZ-lP-FfZ">
