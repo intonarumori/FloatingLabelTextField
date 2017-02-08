@@ -24,7 +24,6 @@ open class FloatingLabelTextField: UITextField {
         }
     }
     
-    @IBInspectable
     open var placeholderFont: UIFont? {
         didSet {
             updatePlaceholder()
