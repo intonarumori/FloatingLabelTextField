@@ -19,6 +19,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A54B0C9D1E4D25F400CB96DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5EFBEC01E4A753800B16EDC /* FloatingLabelTextField.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A5EFBED01E4A7CA400B16EDC;
+			remoteInfo = FloatingLabelTextFieldTests;
+		};
 		A5EFBEC41E4A753800B16EDC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A5EFBEC01E4A753800B16EDC /* FloatingLabelTextField.xcodeproj */;
@@ -122,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				A5EFBEC51E4A753800B16EDC /* FloatingLabelTextField.framework */,
+				A54B0C9E1E4D25F400CB96DF /* FloatingLabelTextFieldTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -189,6 +197,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		A54B0C9E1E4D25F400CB96DF /* FloatingLabelTextFieldTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = FloatingLabelTextFieldTests.xctest;
+			remoteRef = A54B0C9D1E4D25F400CB96DF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		A5EFBEC51E4A753800B16EDC /* FloatingLabelTextField.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
