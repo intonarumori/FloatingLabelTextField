@@ -13,7 +13,6 @@
 		A5EFBE4D1E4A716400B16EDC /* FloatingLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EFBE4A1E4A716400B16EDC /* FloatingLabelTextField.swift */; };
 		A5EFBED51E4A7CA400B16EDC /* FloatingLabelTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5EFBE371E4A70B600B16EDC /* FloatingLabelTextField.framework */; };
 		A5EFBEDE1E4A7CCD00B16EDC /* FloatingLabelTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EFBEDC1E4A7CCD00B16EDC /* FloatingLabelTextFieldTests.swift */; };
-		A5EFBEDF1E4A7CCD00B16EDC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5EFBEDD1E4A7CCD00B16EDC /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -199,7 +198,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5EFBEDF1E4A7CCD00B16EDC /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +344,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hu.rumori.FloatingLabelTextField;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -367,6 +366,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hu.rumori.FloatingLabelTextField;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -427,6 +427,7 @@
 				A5EFBED91E4A7CA400B16EDC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
