@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A5EFBE7A1E4A730C00B16EDC"
-               BuildableName = "iOS Example.app"
-               BlueprintName = "iOS Example"
-               ReferencedContainer = "container:iOS Example.xcodeproj">
+               BlueprintIdentifier = "A5EFBE361E4A70B600B16EDC"
+               BuildableName = "FloatingLabelTextField.framework"
+               BlueprintName = "FloatingLabelTextField"
+               ReferencedContainer = "container:FloatingLabelTextField.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,14 +28,24 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A5EFBECF1E4A7CA400B16EDC"
+               BuildableName = "FloatingLabelTextFieldTests.xctest"
+               BlueprintName = "FloatingLabelTextFieldTests"
+               ReferencedContainer = "container:FloatingLabelTextField.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A5EFBE7A1E4A730C00B16EDC"
-            BuildableName = "iOS Example.app"
-            BlueprintName = "iOS Example"
-            ReferencedContainer = "container:iOS Example.xcodeproj">
+            BlueprintIdentifier = "A5EFBE361E4A70B600B16EDC"
+            BuildableName = "FloatingLabelTextField.framework"
+            BlueprintName = "FloatingLabelTextField"
+            ReferencedContainer = "container:FloatingLabelTextField.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -51,16 +61,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A5EFBE7A1E4A730C00B16EDC"
-            BuildableName = "iOS Example.app"
-            BlueprintName = "iOS Example"
-            ReferencedContainer = "container:iOS Example.xcodeproj">
+            BlueprintIdentifier = "A5EFBE361E4A70B600B16EDC"
+            BuildableName = "FloatingLabelTextField.framework"
+            BlueprintName = "FloatingLabelTextField"
+            ReferencedContainer = "container:FloatingLabelTextField.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -70,16 +79,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A5EFBE7A1E4A730C00B16EDC"
-            BuildableName = "iOS Example.app"
-            BlueprintName = "iOS Example"
-            ReferencedContainer = "container:iOS Example.xcodeproj">
+            BlueprintIdentifier = "A5EFBE361E4A70B600B16EDC"
+            BuildableName = "FloatingLabelTextField.framework"
+            BlueprintName = "FloatingLabelTextField"
+            ReferencedContainer = "container:FloatingLabelTextField.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
