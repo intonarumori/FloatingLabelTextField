@@ -103,7 +103,6 @@ open class FloatingLabelTextField: UITextField {
         }
     }
     
-    
     // MARK: -
     
     @IBInspectable
@@ -137,11 +136,11 @@ open class FloatingLabelTextField: UITextField {
         }
     }
     
-    open var titleLabelAnimator: FloatingLabelAnimator = FloatingLabelVerticalAnimator()
+    open lazy var titleLabelAnimator: FloatingLabelAnimator = FloatingLabelVerticalAnimator()
     
     // MARK: - Subviews
     
-    private(set) lazy var titleLabel: UILabel = {
+    public private(set) lazy var titleLabel: UILabel = {
         let titleLabel = UILabel()
         titleLabel.font = UIFont.systemFont(ofSize: 13)
         return titleLabel
@@ -151,7 +150,7 @@ open class FloatingLabelTextField: UITextField {
     
     // MARK: - Init
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         init_FloatingLabelTextField()
     }
