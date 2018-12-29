@@ -18,7 +18,8 @@ public protocol FloatingLabelAnimator: class {
 open class FloatingLabelTextField: UITextField {
     
     public enum TitleViewMode: String {
-        case whenNotEmpty
+        case whileNotEmpty
+        case whileEditing
         case always
     }
     
@@ -110,7 +111,7 @@ open class FloatingLabelTextField: UITextField {
     
     // MARK: -
     
-    open var titleMode: TitleViewMode = .whenNotEmpty {
+    open var titleMode: TitleViewMode = .whileNotEmpty {
         didSet { updateTitle() }
     }
     

@@ -18,7 +18,9 @@ public class FloatingLabelHorizontalAnimator: FloatingLabelAnimator {
             switch textField.titleMode {
             case .always:
                 shouldShow = true
-            case .whenNotEmpty:
+            case .whileEditing:
+                shouldShow = textField.isFirstResponder
+            case .whileNotEmpty:
                 shouldShow = textField.hasText
             }
             if shouldShow {
@@ -53,7 +55,9 @@ public class FloatingLabelVerticalAnimator: FloatingLabelAnimator {
             switch textField.titleMode {
             case .always:
                 shouldShow = true
-            case .whenNotEmpty:
+            case .whileEditing:
+                shouldShow = textField.isFirstResponder
+            case .whileNotEmpty:
                 shouldShow = textField.hasText
             }
             if shouldShow {
@@ -89,7 +93,9 @@ public class FloatingLabelAlphaAnimator: FloatingLabelAnimator {
             switch textField.titleMode {
             case .always:
                 shouldShow = true
-            case .whenNotEmpty:
+            case .whileEditing:
+                shouldShow = textField.isFirstResponder
+            case .whileNotEmpty:
                 shouldShow = textField.hasText
             }
             if shouldShow {
