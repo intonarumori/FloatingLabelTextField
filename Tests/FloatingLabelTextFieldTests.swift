@@ -217,7 +217,7 @@ class FloatingLabelTextFieldTests: XCTestCase {
         XCTAssertEqual(textField.titleLabel.text, "Placeholder")
         
         // when
-        let result = textField.becomeFirstResponder()
+        _ = textField.becomeFirstResponder()
         
         // then
         XCTAssertEqual(textField.titleLabel.text, "Editing title")

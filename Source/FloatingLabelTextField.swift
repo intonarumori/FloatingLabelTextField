@@ -17,6 +17,11 @@ public protocol FloatingLabelAnimator: class {
 @IBDesignable
 open class FloatingLabelTextField: UITextField {
     
+    public enum TitleViewMode: String {
+        case whenNotEmpty
+        case always
+    }
+    
     @IBInspectable
     open var placeholderColor: UIColor? {
         didSet {
@@ -104,6 +109,20 @@ open class FloatingLabelTextField: UITextField {
     }
     
     // MARK: -
+    
+    open var titleMode: TitleViewMode = .whenNotEmpty {
+        didSet { updateTitle() }
+    }
+    
+    @IBInspectable
+    open var titleModeString: String {
+        set {
+            if let mode = TitleViewMode(rawValue: newValue) {
+                titleMode = mode
+            }
+        }
+        get { return titleMode.rawValue }
+    }
     
     @IBInspectable
     open var title: String? {
@@ -321,14 +340,12 @@ open class FloatingLabelTextField: UITextField {
         super.layoutSubviews()
         
         lineView?.frame = CGRect(x: 0, y: bounds.maxY - lineHeight, width: bounds.width, height: lineHeight)
-        
         /*
         for subview in subviews {
             if subview != titleLabel && subview != lineView {
                 subview.backgroundColor = UIColor(red: 0, green: 1, blue: 0, alpha: 0.5)
             }
         }*/
-        
         titleLabelAnimator.layout(titleLabel: titleLabel, for: self)
     }
 }

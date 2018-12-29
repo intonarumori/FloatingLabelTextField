@@ -13,11 +13,18 @@ public class FloatingLabelHorizontalAnimator: FloatingLabelAnimator {
         let block: (FloatingLabelTextField, UILabel) -> Void = { textField, label in
             
             let targetFrame = CGRect(x:0, y:0, width: textField.bounds.width, height: label.font.lineHeight)
-            if textField.hasText {
+
+            let shouldShow: Bool
+            switch textField.titleMode {
+            case .always:
+                shouldShow = true
+            case .whenNotEmpty:
+                shouldShow = textField.hasText
+            }
+            if shouldShow {
                 label.frame = targetFrame
                 label.alpha = 1.0
             } else {
-                
                 label.frame = targetFrame.offsetBy(dx: 10, dy:0)
                 label.alpha = 0.0
             }
@@ -41,11 +48,18 @@ public class FloatingLabelVerticalAnimator: FloatingLabelAnimator {
         let block: (FloatingLabelTextField, UILabel) -> Void = { textField, label in
             
             let targetFrame = CGRect(x:0, y:0, width: textField.bounds.width, height: label.font.lineHeight)
-            if textField.hasText {
+            
+            let shouldShow: Bool
+            switch textField.titleMode {
+            case .always:
+                shouldShow = true
+            case .whenNotEmpty:
+                shouldShow = textField.hasText
+            }
+            if shouldShow {
                 label.frame = targetFrame
                 label.alpha = 1.0
             } else {
-                
                 label.frame = targetFrame.offsetBy(dx: 0, dy: 10)
                 label.alpha = 0.0
             }
@@ -71,7 +85,14 @@ public class FloatingLabelAlphaAnimator: FloatingLabelAnimator {
         label.frame = targetFrame
 
         let block: (FloatingLabelTextField, UILabel) -> Void = { textField, label in
-            if textField.hasText {
+            let shouldShow: Bool
+            switch textField.titleMode {
+            case .always:
+                shouldShow = true
+            case .whenNotEmpty:
+                shouldShow = textField.hasText
+            }
+            if shouldShow {
                 label.alpha = 1.0
             } else {
                 label.alpha = 0.0
@@ -89,4 +110,3 @@ public class FloatingLabelAlphaAnimator: FloatingLabelAnimator {
         }
     }
 }
-
