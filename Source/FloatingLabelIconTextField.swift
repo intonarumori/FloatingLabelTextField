@@ -79,7 +79,7 @@ open class FloatingLabelIconTextField: FloatingLabelTextField {
     
     // MARK: -
     
-    open func updateIconView() {
+    @objc open func updateIconView() {
         
         if let iconImage = iconImage {
             let image = hasText ? iconImage.withRenderingMode(.alwaysTemplate) : iconImage

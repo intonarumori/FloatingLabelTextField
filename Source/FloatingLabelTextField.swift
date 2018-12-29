@@ -31,7 +31,7 @@ open class FloatingLabelTextField: UITextField {
     }
     
     @IBInspectable
-    open var textInsets: UIEdgeInsets = UIEdgeInsetsMake(5, 0, 5, 0) {
+    open var textInsets: UIEdgeInsets = UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0) {
         didSet {
             setNeedsLayout()
             invalidateIntrinsicContentSize()
@@ -126,7 +126,7 @@ open class FloatingLabelTextField: UITextField {
         }
     }
     
-    open override var borderStyle: UITextBorderStyle {
+    open override var borderStyle: UITextField.BorderStyle {
         set {
             // NOTE: we are not supporting borderstyle
             print("FloatingLabelTextField does not support the borderStyle property")
@@ -201,9 +201,9 @@ open class FloatingLabelTextField: UITextField {
     private func updatePlaceholder() {
         if let placeholder = self.placeholder {
             
-            var attributes = [String: Any]()
-            attributes[NSForegroundColorAttributeName] = placeholderColor
-            attributes[NSFontAttributeName] = placeholderFont ?? font
+            var attributes = [NSAttributedString.Key: Any]()
+            attributes[.foregroundColor] = placeholderColor
+            attributes[.font] = placeholderFont ?? font
 
             attributedPlaceholder = NSAttributedString(
                 string: placeholder,
@@ -262,13 +262,19 @@ open class FloatingLabelTextField: UITextField {
     open override func editingRect(forBounds bounds: CGRect) -> CGRect {
         
         let rect = super.editingRect(forBounds: bounds)
-        return UIEdgeInsetsInsetRect(rect, UIEdgeInsetsMake(titleHeight + textInsets.top, textInsets.left, lineHeight + textInsets.bottom, textInsets.right))
+        return rect.inset(by: UIEdgeInsets(top: titleHeight + textInsets.top,
+                                           left: textInsets.left,
+                                           bottom: lineHeight + textInsets.bottom,
+                                           right: textInsets.right))
     }
     
     open override func textRect(forBounds bounds: CGRect) -> CGRect {
 
         let rect = super.textRect(forBounds: bounds)
-        return UIEdgeInsetsInsetRect(rect, UIEdgeInsetsMake(titleHeight + textInsets.top, textInsets.left, lineHeight + textInsets.bottom, textInsets.right))
+        return rect.inset(by: UIEdgeInsets(top: titleHeight + textInsets.top,
+                                           left: textInsets.left,
+                                           bottom: lineHeight + textInsets.bottom,
+                                           right: textInsets.right))
     }
     
     open override func leftViewRect(forBounds bounds: CGRect) -> CGRect {

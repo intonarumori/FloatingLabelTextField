@@ -79,7 +79,7 @@ class InsetsExampleViewController: UIViewController {
         case 0:
             textField.iconImage = nil
         default:
-            textField.iconImage = #imageLiteral(resourceName: "Envelope")
+            textField.iconImage = #imageLiteral(resourceName: "Doc")
         }
     }
 
