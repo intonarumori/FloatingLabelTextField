@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name = "RMFloatingLabelTextField"
-  s.version = "0.0.5"
+  s.version = "0.0.6"
   s.license = { :type => "MIT", :file => "LICENSE.md" }
   s.summary = "A clean and flexible Swift implementation of the floating label UI pattern for UITextField"
   s.homepage = "http://github.com/intonarumori/FloatingLabelTextField"

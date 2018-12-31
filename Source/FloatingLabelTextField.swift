@@ -152,7 +152,7 @@ open class FloatingLabelTextField: UITextField {
             print("FloatingLabelTextField does not support the borderStyle property")
         }
         get {
-            return .none
+            return super.borderStyle
         }
     }
     
@@ -196,7 +196,7 @@ open class FloatingLabelTextField: UITextField {
         super.prepareForInterfaceBuilder()
 
         // NOTE: borderstyle is not supported
-        borderStyle = .none
+        super.borderStyle = .none
     }
     
     // MARK: - Updates
