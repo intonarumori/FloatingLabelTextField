@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A53DF4F121DE48FC00C8EE10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53DF4F021DE48FC00C8EE10 /* AppDelegate.swift */; };
+		A53DF4F321DE48FC00C8EE10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53DF4F221DE48FC00C8EE10 /* ViewController.swift */; };
+		A53DF4F621DE48FC00C8EE10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A53DF4F421DE48FC00C8EE10 /* Main.storyboard */; };
+		A53DF4F821DE48FF00C8EE10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A53DF4F721DE48FF00C8EE10 /* Assets.xcassets */; };
+		A53DF4FB21DE48FF00C8EE10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A53DF4F921DE48FF00C8EE10 /* LaunchScreen.storyboard */; };
 		A5EFBE461E4A712500B16EDC /* FloatingLabelTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EFBE441E4A712500B16EDC /* FloatingLabelTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5EFBE4B1E4A716400B16EDC /* FloatingLabelAnimators.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EFBE481E4A716400B16EDC /* FloatingLabelAnimators.swift */; };
 		A5EFBE4C1E4A716400B16EDC /* FloatingLabelIconTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EFBE491E4A716400B16EDC /* FloatingLabelIconTextField.swift */; };
@@ -16,6 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A53DF50021DE490700C8EE10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5EFBE2E1E4A70B600B16EDC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A53DF4ED21DE48FC00C8EE10;
+			remoteInfo = FloatingLabelTextFieldTestHost;
+		};
 		A5EFBED61E4A7CA400B16EDC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A5EFBE2E1E4A70B600B16EDC /* Project object */;
@@ -26,6 +38,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A53DF4EE21DE48FC00C8EE10 /* FloatingLabelTextFieldTestHost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FloatingLabelTextFieldTestHost.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A53DF4F021DE48FC00C8EE10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A53DF4F221DE48FC00C8EE10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A53DF4F521DE48FC00C8EE10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A53DF4F721DE48FF00C8EE10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A53DF4FA21DE48FF00C8EE10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A53DF4FC21DE48FF00C8EE10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5BD3A5421D789B60041CB55 /* RMFloatingLabelTextField.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RMFloatingLabelTextField.podspec; sourceTree = "<group>"; };
 		A5EFBE371E4A70B600B16EDC /* FloatingLabelTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FloatingLabelTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5EFBE441E4A712500B16EDC /* FloatingLabelTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloatingLabelTextField.h; sourceTree = "<group>"; };
@@ -39,6 +58,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A53DF4EB21DE48FC00C8EE10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A5EFBE331E4A70B600B16EDC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -57,12 +83,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A53DF4EF21DE48FC00C8EE10 /* FloatingLabelTextFieldTestHost */ = {
+			isa = PBXGroup;
+			children = (
+				A53DF4F021DE48FC00C8EE10 /* AppDelegate.swift */,
+				A53DF4F221DE48FC00C8EE10 /* ViewController.swift */,
+				A53DF4F421DE48FC00C8EE10 /* Main.storyboard */,
+				A53DF4F721DE48FF00C8EE10 /* Assets.xcassets */,
+				A53DF4F921DE48FF00C8EE10 /* LaunchScreen.storyboard */,
+				A53DF4FC21DE48FF00C8EE10 /* Info.plist */,
+			);
+			path = FloatingLabelTextFieldTestHost;
+			sourceTree = "<group>";
+		};
 		A5EFBE2D1E4A70B600B16EDC = {
 			isa = PBXGroup;
 			children = (
 				A5BD3A5421D789B60041CB55 /* RMFloatingLabelTextField.podspec */,
 				A5EFBE431E4A712500B16EDC /* Source */,
 				A5EFBEDB1E4A7CCD00B16EDC /* Tests */,
+				A53DF4EF21DE48FC00C8EE10 /* FloatingLabelTextFieldTestHost */,
 				A5EFBE381E4A70B600B16EDC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,6 +112,7 @@
 			children = (
 				A5EFBE371E4A70B600B16EDC /* FloatingLabelTextField.framework */,
 				A5EFBED01E4A7CA400B16EDC /* FloatingLabelTextFieldTests.xctest */,
+				A53DF4EE21DE48FC00C8EE10 /* FloatingLabelTextFieldTestHost.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -111,6 +152,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		A53DF4ED21DE48FC00C8EE10 /* FloatingLabelTextFieldTestHost */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A53DF4FD21DE48FF00C8EE10 /* Build configuration list for PBXNativeTarget "FloatingLabelTextFieldTestHost" */;
+			buildPhases = (
+				A53DF4EA21DE48FC00C8EE10 /* Sources */,
+				A53DF4EB21DE48FC00C8EE10 /* Frameworks */,
+				A53DF4EC21DE48FC00C8EE10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FloatingLabelTextFieldTestHost;
+			productName = FloatingLabelTextFieldTestHost;
+			productReference = A53DF4EE21DE48FC00C8EE10 /* FloatingLabelTextFieldTestHost.app */;
+			productType = "com.apple.product-type.application";
+		};
 		A5EFBE361E4A70B600B16EDC /* FloatingLabelTextField */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5EFBE3F1E4A70B600B16EDC /* Build configuration list for PBXNativeTarget "FloatingLabelTextField" */;
@@ -141,6 +199,7 @@
 			);
 			dependencies = (
 				A5EFBED71E4A7CA400B16EDC /* PBXTargetDependency */,
+				A53DF50121DE490700C8EE10 /* PBXTargetDependency */,
 			);
 			name = FloatingLabelTextFieldTests;
 			productName = FloatingLabelTextFieldTests;
@@ -153,10 +212,14 @@
 		A5EFBE2E1E4A70B600B16EDC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0820;
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = rumori;
 				TargetAttributes = {
+					A53DF4ED21DE48FC00C8EE10 = {
+						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Automatic;
+					};
 					A5EFBE361E4A70B600B16EDC = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = LAA5EN69T7;
@@ -165,8 +228,9 @@
 					};
 					A5EFBECF1E4A7CA400B16EDC = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = LAA5EN69T7;
+						DevelopmentTeam = XG6G6RA29P;
 						ProvisioningStyle = Automatic;
+						TestTargetID = A53DF4ED21DE48FC00C8EE10;
 					};
 				};
 			};
@@ -176,6 +240,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = A5EFBE2D1E4A70B600B16EDC;
 			productRefGroup = A5EFBE381E4A70B600B16EDC /* Products */;
@@ -184,11 +249,22 @@
 			targets = (
 				A5EFBE361E4A70B600B16EDC /* FloatingLabelTextField */,
 				A5EFBECF1E4A7CA400B16EDC /* FloatingLabelTextFieldTests */,
+				A53DF4ED21DE48FC00C8EE10 /* FloatingLabelTextFieldTestHost */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A53DF4EC21DE48FC00C8EE10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A53DF4FB21DE48FF00C8EE10 /* LaunchScreen.storyboard in Resources */,
+				A53DF4F821DE48FF00C8EE10 /* Assets.xcassets in Resources */,
+				A53DF4F621DE48FC00C8EE10 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A5EFBE351E4A70B600B16EDC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -206,6 +282,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A53DF4EA21DE48FC00C8EE10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A53DF4F321DE48FC00C8EE10 /* ViewController.swift in Sources */,
+				A53DF4F121DE48FC00C8EE10 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A5EFBE321E4A70B600B16EDC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -227,6 +312,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		A53DF50121DE490700C8EE10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A53DF4ED21DE48FC00C8EE10 /* FloatingLabelTextFieldTestHost */;
+			targetProxy = A53DF50021DE490700C8EE10 /* PBXContainerItemProxy */;
+		};
 		A5EFBED71E4A7CA400B16EDC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A5EFBE361E4A70B600B16EDC /* FloatingLabelTextField */;
@@ -234,7 +324,71 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		A53DF4F421DE48FC00C8EE10 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A53DF4F521DE48FC00C8EE10 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A53DF4F921DE48FF00C8EE10 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A53DF4FA21DE48FF00C8EE10 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		A53DF4FE21DE48FF00C8EE10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = FloatingLabelTextFieldTestHost/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = hu.rumori.FloatingLabelTextFieldTestHost;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A53DF4FF21DE48FF00C8EE10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = FloatingLabelTextFieldTestHost/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = hu.rumori.FloatingLabelTextFieldTestHost;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		A5EFBE3D1E4A70B600B16EDC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -398,30 +552,41 @@
 		A5EFBED81E4A7CA400B16EDC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = LAA5EN69T7;
+				DEVELOPMENT_TEAM = XG6G6RA29P;
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hu.rumori.FloatingLabelTextFieldTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FloatingLabelTextFieldTestHost.app/FloatingLabelTextFieldTestHost";
 			};
 			name = Debug;
 		};
 		A5EFBED91E4A7CA400B16EDC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = LAA5EN69T7;
+				DEVELOPMENT_TEAM = XG6G6RA29P;
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hu.rumori.FloatingLabelTextFieldTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FloatingLabelTextFieldTestHost.app/FloatingLabelTextFieldTestHost";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A53DF4FD21DE48FF00C8EE10 /* Build configuration list for PBXNativeTarget "FloatingLabelTextFieldTestHost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A53DF4FE21DE48FF00C8EE10 /* Debug */,
+				A53DF4FF21DE48FF00C8EE10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A5EFBE311E4A70B600B16EDC /* Build configuration list for PBXProject "FloatingLabelTextField" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
