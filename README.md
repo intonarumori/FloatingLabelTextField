@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/intonarumori/FloatingLabelTextField.svg?branch=master)](https://travis-ci.org/intonarumori/FloatingLabelTextField)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/intonarumori/FloatingLabelTextField/blob/master/LICENSE.md)
 
-A Swift 3 implementation of the floating label UI pattern originally created by Matt D. Smith (@mds).
+A Swift implementation of the floating label UI pattern originally created by Matt D. Smith (@mds).
 
 This implementation features:  
 ☑️️ optional underline  
@@ -19,5 +19,8 @@ This implementation features:
 ### CocoaPods
 
 We only support manual installation at the moment. Add the following line to your podfile:  
-`pod 'RMFloatingLabelTextField', :git => 'https://github.com/intonarumori/FloatingLabelTextField.git'`  
-and run `pod install`
+```
+pod 'RMFloatingLabelTextField', :git => 'https://github.com/intonarumori/FloatingLabelTextField.git'
+```
+
+Then run: `pod install`
