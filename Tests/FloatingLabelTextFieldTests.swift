@@ -10,14 +10,17 @@ import XCTest
 import FloatingLabelTextField
 
 class FloatingLabelTextFieldTests: XCTestCase {
-    
+
+    var window: UIWindow!
     var textField: FloatingLabelTextField!
     
     override func setUp() {
         super.setUp()
-        
-        let frame = CGRect(x: 0, y: 0, width: 200, height: 30)
-        textField = FloatingLabelTextField(frame: frame)
+
+        window = UIWindow(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+        textField = FloatingLabelTextField(frame: CGRect(x: 0, y: 0, width: 200, height: 30))
+        window.addSubview(textField)
+        window.makeKeyAndVisible()
     }
     
     override func tearDown() {
@@ -220,7 +223,7 @@ class FloatingLabelTextFieldTests: XCTestCase {
         _ = textField.becomeFirstResponder()
         
         // then
+        XCTAssertTrue(textField.isFirstResponder)
         XCTAssertEqual(textField.titleLabel.text, "Editing title")
     }
-
 }
