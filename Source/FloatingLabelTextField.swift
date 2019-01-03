@@ -149,7 +149,7 @@ open class FloatingLabelTextField: UITextField {
     open override var borderStyle: UITextField.BorderStyle {
         set {
             // NOTE: we are not supporting borderstyle
-            print("FloatingLabelTextField does not support the borderStyle property")
+            //print("FloatingLabelTextField does not support the borderStyle property")
         }
         get {
             return super.borderStyle
